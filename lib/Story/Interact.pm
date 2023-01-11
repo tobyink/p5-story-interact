@@ -110,6 +110,9 @@ already exists with that identifier, it does nothing. If the player character
 will need to interact with another character on multiple occasions, it is
 useful to define an NPC for them to track the character's state.
 
+The C<visited> function returns the number of times this page has been visited
+as part of the narrative before.
+
 The C<true> and C<false> functions are just to make your code more readable.
 
 The first page always has id "main".

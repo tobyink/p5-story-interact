@@ -118,7 +118,7 @@ sub run_debugger {
 	my ( $self, $page ) = @_;
 	print "Next page options: \n";
 	print "Now entering DEBUG mode.\n";
-	Story::Interact::Syntax::START( $self->state );
+	Story::Interact::Syntax::START( $self->state, ':debug' );
 	for my $next ( @{ $page->next_pages } ) {
 		Story::Interact::Syntax::next_page( $next->[0], $next->[1], %{ $next->[2] // {} } );
 	}

@@ -21,6 +21,7 @@ our @EXPORT = qw(
 	player
 	npc
 	define_npc
+	visited
 	true
 	false
 );
@@ -28,8 +29,8 @@ our @EXPORT = qw(
 my ( $page, $state );
 
 sub START {
-	( $state ) = @_;
-	$page = Story::Interact::Page->new;
+	( $state, my $page_id ) = @_;
+	$page = Story::Interact::Page->new( id => $page_id );
 }
 
 sub text {
@@ -70,6 +71,11 @@ sub define_npc {
 	my ( $code, %attrs ) = @_;
 	return if defined $state->character->{$code};
 	$state->character->{$code} = Story::Interact::Character->new( %attrs );
+}
+
+sub visited {
+	my ( $code ) = @_ ? @_ : ( $page->id );
+	$state->visited->{$code} //= 0;
 }
 
 sub FINISH {

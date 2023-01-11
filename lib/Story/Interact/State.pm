@@ -31,6 +31,12 @@ has 'location' => (
 	builder   => sub { {} },
 );
 
+has 'visited' => (
+	is        => 'ro',
+	isa       => HashRef->of( PositiveOrZeroInt ),
+	builder   => sub { {} },
+);
+
 sub BUILD {
 	my ( $self, $arg ) = @_;
 	$self->character->{player} = Story::Interact::Character->new( name => 'Anon' );

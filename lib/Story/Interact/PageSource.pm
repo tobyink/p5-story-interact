@@ -40,11 +40,12 @@ sub get_page {
 	my ( $self, $state, $page_id ) = @_;
 	my $code = $self->get_source_code( $page_id );
 
-	return Story::Interact::Page->new unless $code;
+	return Story::Interact::Page->new( id => ':end' ) unless $code;
 
-	Story::Interact::Syntax::START( $state );
+	Story::Interact::Syntax::START( $state, $page_id );
 	$self->safe->reval( "$code; 1", 1 )
 		or croak( "Died on page '$page_id': $@" );
+	++$state->visited->{$page_id};
 	return Story::Interact::Syntax::FINISH( $state );
 }
 

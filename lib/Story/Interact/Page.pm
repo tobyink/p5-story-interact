@@ -17,6 +17,12 @@ use overload (
 	fallback => 1,
 );
 
+has 'id' => (
+	is        => 'ro',
+	isa       => Str,
+	required  => 1,
+);
+
 has 'location' => (
 	is        => 'rwp',
 	isa       => Str,
