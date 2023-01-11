@@ -5,7 +5,7 @@ use warnings;
 package Story::Interact;
 
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.001000';
+our $VERSION   = '0.001001';
 
 use Story::Interact::Character ();
 use Story::Interact::Harness::Terminal ();
@@ -75,8 +75,8 @@ An example page:
   next_page living_room => 'Go to the living room';
 
 The C<text> function is just to add a paragraph of text. (It may use simple
-Markdown for B<< **bold** >> and I<< *italics* >>.) Pages can of course contain multiple
-paragraphs.
+Markdown for B<< **bold** >> and I<< *italics* >>.) Pages can of course contain
+multiple paragraphs.
 
 The C<next_page> function defines a path the story can take after this page.
 It takes a page identifier followed by a description. It can be used multiple
