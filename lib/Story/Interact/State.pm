@@ -39,12 +39,18 @@ has 'visited' => (
 
 sub BUILD {
 	my ( $self, $arg ) = @_;
-	$self->character->{player} = Story::Interact::Character->new( name => 'Anon' );
+	$self->define_npc( player => ( name => 'Anon' ) );
 }
 
 sub player {
 	my ( $self ) = @_;
 	return $self->character->{player};
+}
+
+sub define_npc {
+	my ( $self, $code, %attrs ) = @_;
+	return if defined $self->character->{$code};
+	$self->character->{$code} = Story::Interact::Character->new( %attrs );
 }
 
 sub update_from_page {
