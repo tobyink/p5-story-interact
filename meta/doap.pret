@@ -1,0 +1,19 @@
+# This file contains general metadata about the project.
+
+@prefix : <http://usefulinc.com/ns/doap#>.
+
+`Story-Interact`
+	:programming-language "Perl" ;
+	:shortdesc            "tools for writing (and reading) an interactive story";
+	:homepage             <https://metacpan.org/release/Story-Interact>;
+	:download-page        <https://metacpan.org/release/Story-Interact>;
+	:bug-database         <https://github.com/tobyink/p5-story-interact/issues>;
+	:repository           [ a :GitRepository; :browse <https://github.com/tobyink/p5-story-interact> ];
+	:created              2023-01-11;
+	:license              <http://dev.perl.org/licenses/>;
+	:maintainer           cpan:TOBYINK;
+	:developer            cpan:TOBYINK.
+
+<http://dev.perl.org/licenses/>
+	dc:title  "the same terms as the perl 5 programming language system itself".
+
