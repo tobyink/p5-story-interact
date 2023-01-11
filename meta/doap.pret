@@ -9,7 +9,7 @@
 	:download-page        <https://metacpan.org/release/Story-Interact>;
 	:bug-database         <https://github.com/tobyink/p5-story-interact/issues>;
 	:repository           [ a :GitRepository; :browse <https://github.com/tobyink/p5-story-interact> ];
-	:created              2023-01-11;
+	:created              2023-01-10;
 	:license              <http://dev.perl.org/licenses/>;
 	:maintainer           cpan:TOBYINK;
 	:developer            cpan:TOBYINK.
