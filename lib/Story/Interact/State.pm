@@ -42,4 +42,16 @@ sub BUILD {
 	$self->character->{player} = Story::Interact::Character->new( name => 'Anon' );
 }
 
+sub player {
+	my ( $self ) = @_;
+	return $self->character->{player};
+}
+
+sub update_from_page {
+	my ( $self, $page ) = @_;
+	++$self->visited->{ $page->id };
+	$self->player->_set_location( $page->location );
+	return $self;
+}
+
 1;

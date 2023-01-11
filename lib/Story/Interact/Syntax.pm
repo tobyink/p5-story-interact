@@ -59,7 +59,7 @@ sub location {
 }
 
 sub player () {
-	return $state->character->{player};
+	return $state->player;
 }
 
 sub npc ($) {
@@ -79,6 +79,7 @@ sub visited {
 }
 
 sub FINISH {
+	$state->update_from_page( $page );
 	my $return = $page;
 	undef $page;
 	return $return;

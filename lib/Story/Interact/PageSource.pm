@@ -45,7 +45,6 @@ sub get_page {
 	Story::Interact::Syntax::START( $state, $page_id );
 	$self->safe->reval( "$code; 1", 1 )
 		or croak( "Died on page '$page_id': $@" );
-	++$state->visited->{$page_id};
 	return Story::Interact::Syntax::FINISH( $state );
 }
 

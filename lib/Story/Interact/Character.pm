@@ -23,6 +23,11 @@ has 'name' => (
 	required  => 1,
 );
 
+has 'location' => (
+	is        => 'rwp',
+	isa       => Str | Undef,
+);
+
 has [ qw( meta knows carries achieved ) ] => (
 	is        => 'ro',
 	isa       => HashRef,
