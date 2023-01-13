@@ -23,6 +23,7 @@ our @EXPORT = qw(
 	visited
 	true
 	false
+	INTERNAL_STATE
 );
 
 my ( $page, $state );
@@ -103,6 +104,10 @@ sub true () {
 
 sub false () {
 	!!0;
+}
+
+sub INTERNAL_STATE () {
+	return $state;
 }
 
 1;
