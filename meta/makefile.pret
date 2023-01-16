@@ -8,6 +8,8 @@
 	:runtime-requirement    [ :on "DBI"^^:CpanId ];
 	:runtime-requirement    [ :on "DBD::SQLite"^^:CpanId ];
 	:runtime-requirement    [ :on "Exporter::Shiny"^^:CpanId ];
+	:runtime-requirement    [ :on "List::Util 1.54"^^:CpanId ];
+	:runtime-requirement    [ :on "match::simple"^^:CpanId ];
 	:runtime-requirement    [ :on "Moo"^^:CpanId ];
 	:runtime-requirement    [ :on "namespace::clean"^^:CpanId ];
 	:runtime-requirement    [ :on "Term::Choose"^^:CpanId ];

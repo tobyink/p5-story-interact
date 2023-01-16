@@ -64,7 +64,6 @@ sub dump {
 	my ( $self ) = @_;
 	require Storable;
 	require MIME::Base64;
-	local $Storable::canonical = 1;
 	return MIME::Base64::encode_base64( Storable::nfreeze( $self ) );
 }
 

@@ -29,6 +29,18 @@ has 'location' => (
 	predicate => 1,
 );
 
+has 'abstract' => (
+	is        => 'rwp',
+	isa       => Str,
+	predicate => 1,
+);
+
+has 'todo' => (
+	is        => 'rwp',
+	isa       => Bool,
+	default   => 0,
+);
+
 has 'text' => (
 	is        => 'ro',
 	isa       => ArrayRef->of( Str ),
