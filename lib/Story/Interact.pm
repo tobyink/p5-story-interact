@@ -102,7 +102,7 @@ The C<< abstract( $string ) >> function defines a title or concise summary for
 the page. It is not intended to be displayed to the reader, but may be useful
 for the writer as a quick reminder of the purpose of the page.
 
-The C<< todo( $bool ) > function indicates whether a page still needs writing.
+The C<< todo( $bool ) >> function indicates whether a page still needs writing.
 Again, it  is not intended to be displayed to the reader, but may be useful
 for the writer.
 
