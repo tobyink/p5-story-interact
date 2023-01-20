@@ -10,6 +10,7 @@ our $VERSION   = '0.001004';
 use Story::Interact::State;
 
 use Moo;
+use Storable qw( dclone );
 use Types::Common -types;
 use namespace::clean;
 
@@ -31,8 +32,11 @@ sub _build_data {
 	my @page_ids = $self->page_source->all_page_ids;
 	my %data;
 	
+	# Allow the `main` page to define NPCs, etc, first.
+	my $state = Story::Interact::State->new;
+	$self->page_source->get_page( $state, 'main' );
+	
 	for my $page_id ( @page_ids ) {
-		
 		$data{$page_id}{exists} = 1;
 		
 		my $page_source = $self->page_source->get_source_code( $page_id ) or next;
@@ -48,8 +52,8 @@ sub _build_data {
 		}
 		
 		my ( @explicit_links, $explicit_todo );
-		my $state = Story::Interact::State->new;
-		if ( my $page = $self->page_source->get_page( $state, $page_id ) ) {
+		my $cloned_state = dclone( $state );
+		if ( my $page = eval { $self->page_source->get_page( $cloned_state, $page_id ) } ) {
 			@explicit_links = map $_->[0], @{ $page->next_pages };
 			$explicit_todo  = 0+!! $page->todo;
 			$data{$page_id}{abstract} = $page->abstract;
