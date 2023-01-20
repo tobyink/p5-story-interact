@@ -28,4 +28,9 @@ sub get_source_code {
 	return $file->slurp_utf8;
 }
 
+sub all_page_ids {
+	my ( $self ) = @_;
+	map $_->basename( '.page.pl' ), $self->dir->children( qr/\.page\.pl\z/ );
+}
+
 1;

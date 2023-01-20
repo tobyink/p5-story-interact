@@ -17,6 +17,7 @@ use Safe ();
 use namespace::clean;
 
 requires 'get_source_code';
+requires 'all_page_ids';
 
 sub get_page {
 	my ( $self, $state, $page_id ) = @_;

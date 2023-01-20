@@ -147,6 +147,8 @@ L<https://github.com/tobyink/p5-story-interact/issues>.
 
 L<Pod::CYOA>, L<https://en.wikipedia.org/wiki/Choose_Your_Own_Adventure>.
 
+L<Story::Interact::WWW>: Mojo-based web interface for Story::Interact.
+
 =head1 AUTHOR
 
 Toby Inkster E<lt>tobyink@cpan.orgE<gt>.
