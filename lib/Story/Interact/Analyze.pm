@@ -27,26 +27,26 @@ has 'data' => (
 
 sub _build_data {
 	my ( $self ) = @_;
-
+	
 	my @page_ids = $self->page_source->all_page_ids;
 	my %data;
-
+	
 	for my $page_id ( @page_ids ) {
-
+		
 		$data{$page_id}{exists} = 1;
-
+		
 		my $page_source = $self->page_source->get_source_code( $page_id ) or next;
 		my @naive_links;
 		while ( $page_source =~ /^ \s* next_page \s* \(? \s* (\S+) \s* [,=] /xg ) {
 			push @naive_links, $1;
 		}
 		@naive_links = map { /\A\w+\z/ ? $1 : scalar( eval $_ ) } @naive_links;
-
+		
 		my $naive_todo = 0;
 		if ( $page_source =~ /^ \s* todo \b /x ) {
 			$naive_todo = 1;
 		}
-
+		
 		my ( @explicit_links, $explicit_todo );
 		my $state = Story::Interact::State->new;
 		if ( my $page = $self->page_source->get_page( $state, $page_id ) ) {
@@ -58,14 +58,14 @@ sub _build_data {
 		else {
 			$data{$page_id}{error} = 1;
 		}
-
+		
 		my @all_links = do {
 			my %tmp;
 			$tmp{$_}++ for @explicit_links;
 			$tmp{$_}++ for @naive_links;
 			keys %tmp;
 		};
-
+		
 		$data{$page_id}{todo} = $explicit_todo // $naive_todo;
 		$data{$page_id}{outgoing} = \@all_links;
 		$data{$page_id}{incoming} //= [];
@@ -75,7 +75,7 @@ sub _build_data {
 			push @{ $data{$link_id}{incoming} }, $page_id;
 		}
 	}
-
+	
 	\%data;
 }
 
@@ -89,7 +89,7 @@ sub to_tabbed {
 	my ( $self ) = @_;
 	my $data = $self->data;
 	my $out = '';
-
+	
 	$out .= join(
 		"\t",
 		'Page Id',
@@ -101,7 +101,7 @@ sub to_tabbed {
 		'Outgoing Links',
 		'Incoming Links',
 	) . "\n";
-
+	
 	for my $page_id ( sort keys %$data ) {
 		my $d = $data->{$page_id};
 		$out .= join(
