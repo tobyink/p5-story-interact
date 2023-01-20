@@ -7,6 +7,7 @@ package Story::Interact;
 our $AUTHORITY = 'cpan:TOBYINK';
 our $VERSION   = '0.001004';
 
+use Story::Interact::Analyze ();
 use Story::Interact::Character ();
 use Story::Interact::Harness::Terminal ();
 use Story::Interact::Page ();
