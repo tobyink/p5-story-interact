@@ -17,6 +17,27 @@ use Story::Interact::PageSource::Dir ();
 use Story::Interact::State ();
 use Story::Interact::Syntax ();
 
+sub new_page_source {
+	my ( undef, $story ) = @_;
+
+	if ( -d $story ) {
+		return Story::Interact::PageSource::Dir->new( dir => $story );
+	}
+	elsif ( $story =~ /^dbi:/i ) {
+		require DBI;
+		my $dbh = DBI->connect( $story, undef, undef );
+		return Story::Interact::PageSource::DBI->new( dbh => $dbh );
+	}
+	elsif ( -f $story ) {
+		require DBI;
+		my $dbh = DBI->connect( "dbi:SQLite:dbname=$story", '', '' );
+		return Story::Interact::PageSource::DBI->new( dbh => $dbh );
+	}
+
+	require Carp;
+	Carp::croak("Could not open '$story' as a page source");
+}
+
 1;
 
 __END__
