@@ -1,5 +1,12 @@
 # This file acts as the project's changelog.
 
+`Story-Interact 0.001007 cpan:TOBYINK`
+	issued  2023-02-01;
+	changeset [
+		item "Story::Interact::Harness::Test."^^Addition;
+		item "Factor out common story harness code into Story::Interact::Harness."^^Change;
+	].
+
 `Story-Interact 0.001006 cpan:TOBYINK`
 	issued  2023-01-28;
 	changeset [
