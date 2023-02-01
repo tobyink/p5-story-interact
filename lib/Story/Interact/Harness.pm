@@ -4,6 +4,9 @@ use warnings;
 
 package Story::Interact::Harness;
 
+our $AUTHORITY = 'cpan:TOBYINK';
+our $VERSION   = '0.001007';
+
 use Story::Interact::State ();
 
 use Moo::Role;
