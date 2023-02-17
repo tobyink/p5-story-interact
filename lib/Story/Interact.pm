@@ -14,6 +14,7 @@ use Story::Interact::Page ();
 use Story::Interact::PageSource ();
 use Story::Interact::PageSource::DBI ();
 use Story::Interact::PageSource::Dir ();
+use Story::Interact::PageSource::Waterfall ();
 use Story::Interact::State ();
 use Story::Interact::Syntax ();
 
