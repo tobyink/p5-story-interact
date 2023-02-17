@@ -1,5 +1,12 @@
 # This file acts as the project's changelog.
 
+`Story-Interact 0.001008 cpan:TOBYINK`
+	issued  2023-02-01;
+	changeset [
+		item "Story::Interact::PageSource::Waterfall."^^Addition;
+		item "Story::Interact::State->character_class."^^Addition;
+	].
+
 `Story-Interact 0.001007 cpan:TOBYINK`
 	issued  2023-02-01;
 	changeset [
