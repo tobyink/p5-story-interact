@@ -10,6 +10,7 @@ our $VERSION   = '0.001008';
 use Moo;
 use Types::Common -types;
 use Types::Path::Tiny -types;
+use List::Util qw( uniqstr );
 use namespace::clean;
 
 with 'Story::Interact::PageSource';
