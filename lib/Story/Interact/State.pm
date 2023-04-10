@@ -44,6 +44,12 @@ has 'character_class' => (
 	builder   => sub { 'Story::Interact::Character' },
 );
 
+has 'params' => (
+	is        => 'rw',
+	isa       => HashRef,
+	builder   => sub { {} },
+);
+
 sub BUILD {
 	my ( $self, $arg ) = @_;
 	$self->define_npc( player => ( name => 'Anon' ) );

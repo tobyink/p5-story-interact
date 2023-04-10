@@ -26,6 +26,7 @@ our @EXPORT = qw(
 	npc
 	define_npc
 	visited
+	params
 	true
 	false
 	match
@@ -101,6 +102,10 @@ sub define_npc {
 sub visited {
 	my ( $code ) = @_ ? @_ : ( $page->id );
 	$state->visited->{$code} //= 0;
+}
+
+sub params () {
+	return $state->params;
 }
 
 sub FINISH {

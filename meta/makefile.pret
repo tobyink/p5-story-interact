@@ -17,6 +17,7 @@
 	:runtime-requirement    [ :on "Text::Wrap"^^:CpanId ];
 	:runtime-requirement    [ :on "Types::Common"^^:CpanId ];
 	:runtime-requirement    [ :on "Types::Path::Tiny"^^:CpanId ];
+	:runtime-requirement    [ :on "URI::Query"^^:CpanId ];
 	:runtime-recommendation [ :on "String::Tagged::Markdown"^^:CpanId ];
 	:runtime-recommendation [ :on "String::Tagged::Terminal"^^:CpanId ];
 	:test-requirement       [ :on "Test2::V0"^^:CpanId ];
