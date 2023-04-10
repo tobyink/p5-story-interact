@@ -10,6 +10,7 @@ our $VERSION   = '0.001009';
 use Story::Interact::Character ();
 
 use Moo;
+use Module::Runtime qw( use_package_optimistically );
 use Types::Common -types;
 use namespace::clean;
 
@@ -56,7 +57,9 @@ sub player {
 sub define_npc {
 	my ( $self, $code, %attrs ) = @_;
 	return if defined $self->character->{$code};
-	$self->character->{$code} = $self->character_class->new( %attrs );
+	
+	my $character_class = delete( $attrs{class} ) // $self->character_class;
+	$self->character->{$code} = use_package_optimistically( $character_class )->new( %attrs );
 }
 
 sub update_from_page {
