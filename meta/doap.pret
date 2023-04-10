@@ -5,7 +5,7 @@
 `Story-Interact`
 	:programming-language "Perl" ;
 	:shortdesc            "tools for writing (and reading) an interactive story";
-	:homepage             <https://metacpan.org/release/Story-Interact>;
+	:homepage             <https://story-interact.xlc.pl/>;
 	:download-page        <https://metacpan.org/release/Story-Interact>;
 	:bug-database         <https://github.com/tobyink/p5-story-interact/issues>;
 	:repository           [ a :GitRepository; :browse <https://github.com/tobyink/p5-story-interact> ];

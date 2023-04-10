@@ -168,6 +168,8 @@ L<https://github.com/tobyink/p5-story-interact/issues>.
 
 =head1 SEE ALSO
 
+L<https://story-interact.xlc.pl/>: Story-Interact's website and tutorial.
+
 L<Pod::CYOA>, L<https://en.wikipedia.org/wiki/Choose_Your_Own_Adventure>.
 
 L<Story::Interact::WWW>: Mojo-based web interface for Story::Interact.
