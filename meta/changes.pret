@@ -1,5 +1,16 @@
 # This file acts as the project's changelog.
 
+`Story-Interact 0.001010 cpan:TOBYINK`
+	issued  2023-04-10;
+	changeset [
+		item "Allow stories to define a special page called `_prelude` which is prepended to the source code of every other page."^^Change;
+		item "Support defining characters in subclasses of Story::Interact::Character."^^Change;
+		item "Add link to https://story-interact.xlc.pl/."^^Documentation;
+		item "Support query strings in `next_page` links."^^Change;
+		item "Tidy up test suite."^^Tests;
+		item "Provide more useful diagnostic output from 00start.t."^^Tests;
+	].
+
 `Story-Interact 0.001009 cpan:TOBYINK`
 	issued  2023-02-17;
 	changeset [
