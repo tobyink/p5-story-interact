@@ -74,4 +74,11 @@ sub add_next_page {
 	return;
 }
 
+sub reset_next_pages {
+	my $self = shift;
+	my @r = @{ $self->next_pages };
+	@{ $self->next_pages } = ();
+	return \@r;
+}
+
 1;

@@ -32,6 +32,7 @@ our @EXPORT = qw(
 	match
 	random
 	INTERNAL_STATE
+	INTERNAL_PAGE
 );
 
 my ( $page, $state );
@@ -139,6 +140,10 @@ sub false () {
 
 sub INTERNAL_STATE () {
 	return $state;
+}
+
+sub INTERNAL_PAGE () {
+	return $page;
 }
 
 sub random ($) {
