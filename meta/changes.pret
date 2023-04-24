@@ -1,5 +1,12 @@
 # This file acts as the project's changelog.
 
+`Story-Interact 0.001011 cpan:TOBYINK`
+	issued  2023-04-24;
+	changeset [
+		item "An `INTERNAL_PAGE` keyword has been added to access the page's internals at runtime."^^Additional;
+		item "Story::Interact::Page now has a reset_next_pages method."^^Additional;
+	].
+
 `Story-Interact 0.001010 cpan:TOBYINK`
 	issued  2023-04-10;
 	changeset [
