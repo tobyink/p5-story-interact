@@ -1,5 +1,11 @@
 # This file acts as the project's changelog.
 
+`Story-Interact 0.001012 cpan:TOBYINK`
+	issued  2023-06-12;
+	changeset [
+		item "Story::Interact::State's load and dump methods now compress the state with Bzip2. This change should be mostly transparent."^^Change;
+	].
+
 `Story-Interact 0.001011 cpan:TOBYINK`
 	issued  2023-04-24;
 	changeset [
