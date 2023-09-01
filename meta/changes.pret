@@ -1,5 +1,11 @@
 # This file acts as the project's changelog.
 
+`Story-Interact 0.001013 cpan:TOBYINK`
+	issued  2023-09-01;
+	changeset [
+		item "Story::Interact::State's load and dump methods now encrypt the compressed state with CAST5 if the PERL_STORY_INTERACT_KEY environment variable contains a key. This change should be mostly transparent."^^Change;
+	].
+
 `Story-Interact 0.001012 cpan:TOBYINK`
 	issued  2023-06-12;
 	changeset [
