@@ -6,6 +6,7 @@
 	:runtime-requirement    [ :on "perl 5.010001"^^:CpanId ];
 	:runtime-requirement    [ :on "Carp"^^:CpanId ];
 	:runtime-requirement    [ :on "Compress::Bzip2"^^:CpanId ];
+	:runtime-requirement    [ :on "CryptX"^^:CpanId ];
 	:runtime-requirement    [ :on "DBI"^^:CpanId ];
 	:runtime-requirement    [ :on "DBD::SQLite"^^:CpanId ];
 	:runtime-requirement    [ :on "Exporter::Shiny"^^:CpanId ];
