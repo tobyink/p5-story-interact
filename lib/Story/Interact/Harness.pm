@@ -5,7 +5,7 @@ use warnings;
 package Story::Interact::Harness;
 
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.001013';
+our $VERSION   = '0.001014';
 
 use Story::Interact::State ();
 

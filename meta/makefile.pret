@@ -4,6 +4,7 @@
 
 `Story-Interact`
 	:runtime-requirement    [ :on "perl 5.010001"^^:CpanId ];
+	:runtime-requirement    [ :on "Bytes::Random::Secure"^^:CpanId ];
 	:runtime-requirement    [ :on "Carp"^^:CpanId ];
 	:runtime-requirement    [ :on "Compress::Bzip2"^^:CpanId ];
 	:runtime-requirement    [ :on "CryptX"^^:CpanId ];

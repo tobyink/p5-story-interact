@@ -7,7 +7,7 @@ package Story::Interact::State;
 warn "LOADED DEV VERSION!";
 
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.001013';
+our $VERSION   = '0.001014';
 
 use Story::Interact::Character ();
 
